@@ -1,5 +1,29 @@
+import java.util.Scanner;
 public class GestionNotes {
     public static void main(String[] args) {
-        System.out.println("Gestion des notes de demarrage");
+        Scanner clavier = new Scanner(System.in);
+        System.out.println("RELEVE DE NOTES");
+        System.out.println("L2");
+        System.out.print("Entrrez vote nom: ");
+        String nom = clavier.nextLine();
+        System.out.print("Entrez la note de mathématiques: ");
+        double noteMath = clavier.nextDouble();
+        System.out.print("Entrez la note de physique: ");
+        double notePhys = clavier.nextDouble();
+        System.out.print("Entrez la note de informatique: ");
+        double noteInfo = clavier.nextDouble();
+        double moyenne = (noteMath + notePhys + noteInfo) / 3.0;
+        System.out.println("========================================");
+        System.out.println("          RELEVÉ DE NOTES               ");
+        System.out.println("========================================");
+        System.out.println("Étudiant : " + nom);
+        System.out.println("----------------------------------------");
+        System.out.println("Maths    : " + noteMath + " / 20");
+        System.out.println("Physique : " + notePhys + " / 20");
+        System.out.println("Info     : " + noteInfo + " / 20");
+        System.out.println("----------------------------------------");
+        System.out.printf("Moyenne  :%.2f / 20\n", moyenne);
+        System.out.println("========================================");
+        clavier.close();
     }
 }
